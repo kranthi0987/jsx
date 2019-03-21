@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import faker from 'faker';
 import CommentDetails from './CommentDetails.js';
 import AprovalCard from './AprovalCard.js';
+import CardClass from './CardClass.js';
 
 // var faker=require('faker');
 // import '../semantic/dist/semantic.min.css'
@@ -10,32 +11,23 @@ import AprovalCard from './AprovalCard.js';
 
 //
 const App = () => {
-
+    const movieItems = [];
+    for (var i=0; i < 10; i++) {
+        movieItems.push(<AprovalCard>
+            <CommentDetails author="sam" timeago="Today date: 6:00Pm" avatar={faker.image.avatar()}
+                comment="comment" />
+        </AprovalCard>);
+    }
     return (
         <div className="ui container comments">
-            <AprovalCard>
-                <CommentDetails author="sam" timeago="Today date: 6:00Pm" avatar={faker.image.avatar()}
-                                comment="comment"/>
-            </AprovalCard>
 
-
-            <CommentDetails author="best" timeago="Today date: 9:00Pm" avatar={faker.image.avatar()}/>
-
+            {movieItems}
+            <CommentDetails author="best" timeago="Today date: 9:00Pm" avatar={faker.image.avatar()} />
+            <CardClass />
         </div>)
 };
 
-class App1 extends React.Component {
-    render() {
-        window.navigator.geolocation.getCurrentPosition(
-            (position) => console.log(position),
-            err => console.error(err)
-        );
-
-        return <div>Latitude:</div>;
-    }
-}
-
 ReactDom.render(
-    <App/>,
+    <App />,
     document.querySelector('#root')
 );

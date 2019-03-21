@@ -5,6 +5,7 @@ const AprovalCard = (props) => {
 
     console.log(props.children);
     return (
+    
         <div className="ui cards">
             <div className="card">
                 <div className="content">
