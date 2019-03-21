@@ -4,6 +4,8 @@ import faker from 'faker';
 import CommentDetails from './CommentDetails.js';
 import AprovalCard from './AprovalCard.js';
 import CardClass from './CardClass.js';
+import SeasonDisplay from './SeasonDisplay.js';
+
 
 // var faker=require('faker');
 // import '../semantic/dist/semantic.min.css'
