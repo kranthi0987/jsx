@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "faker": "^4.1.0",
+    "filepond": "^4.3.4",
+    "filepond-plugin-image-preview": "^4.0.5",
+    "material-ui": "^0.20.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-dropzone": "^10.0.6",
+    "react-filepond": "^7.0.1",
     "react-scripts": "2.1.8",
+    "react-sweet-progress": "^1.1.2",
     "semantic-ui-react": "^0.86.0"
   },
   "scripts": {
